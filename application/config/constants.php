@@ -41,10 +41,5 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 //FrontEnd Constant
 define('WEBSITE_URL','http://localhost/yourprojectname/');
-define('ADMIN_THEME_URL',WEBSITE_URL.'themes/backend/');
-
-//Backend Constants
-define('IMAGES', WEBSITE_URL."themes/backend/images/");
-define('CKEDITOR', WEBSITE_URL."ckeditor/");
 define('MODULE_PATH', WEBSITE_URL."siteadmin/");
 define('CONTAINER_PATH', "siteadmin/container");
