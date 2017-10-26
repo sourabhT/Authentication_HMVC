@@ -40,7 +40,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 /* Location: ./application/config/constants.php */
 
 //FrontEnd Constant
-define('WEBSITE_URL','http://localhost/recipe_eye/vtadmin/');
+define('WEBSITE_URL','http://localhost/yourprojectname/');
 define('ADMIN_THEME_URL',WEBSITE_URL.'themes/backend/');
 
 //Backend Constants

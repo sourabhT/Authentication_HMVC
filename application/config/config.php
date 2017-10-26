@@ -17,7 +17,7 @@
 |
 */
 //$config['base_url'] = '';
-$config['base_url']	= 'http://localhost/recipe_eye/vtadmin/';
+$config['base_url']	= 'http://localhost/yourprojectname/';
 /*
 |--------------------------------------------------------------------------
 | Index File
