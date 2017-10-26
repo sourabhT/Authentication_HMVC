@@ -1,5 +1,5 @@
 <?php
-class Logout extends CI_Controller {
+class Logout extends MX_Controller {
     public $moduleName = 'logout';
     public function __construct() {
         parent::__construct();

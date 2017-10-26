@@ -1,6 +1,6 @@
 <?php
 
-class Login extends CI_Controller {
+class Login extends MX_Controller {
 
     public $moduleName = 'login';
 
@@ -30,7 +30,6 @@ class Login extends CI_Controller {
                     $result = $this->load->authentication_model->doLogin();
                     if (isset($result->username) && $result->username != '' && isset($result->user_id) && $result->user_id != '') {
 
-                        $this->user_logs($result->user_id, $result->username, $result->fullname, 'Login', 'Login Successfully', $localtime);
                         $this->session->set_userdata('userid', $result->user_id);
                         $this->session->set_userdata('role_id', $result->role_id);
                         $this->session->set_userdata('parent_id', $result->parent_id);
@@ -56,10 +55,5 @@ class Login extends CI_Controller {
         }
     }
 
-    public function user_logs($user_id, $username, $fullname, $log_title, $log_description, $localtime) {
-        $ip = $this->input->ip_address();
-        $userLogData = array('user_id' => $user_id, 'username' => $username, 'fullname' => $fullname, 'log_title' => $log_title, 'log_description' => $log_description, 'localtime' => $localtime, 'ip_address' => $ip);
-        $this->db->insert('logs', $userLogData);
-    }
 
 }
