@@ -4,5 +4,5 @@ RewriteBase /
 RewriteCond $1 !^(index\.php|assets|uploaded_files|img_cache|system|jscal|robots\.txt|favicon\.ico)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /recipe_eye/vtadmin/index.php?/$1 [L,QSA]
+RewriteRule ^(.*)$ /index.php?/$1 [L,QSA]
 </IfModule>
