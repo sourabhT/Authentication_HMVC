@@ -1,7 +1,6 @@
 <?php
 /*
  * author : Sourabh Turkar
- * date : 4-5-2015
  * Type : Class Model[business-logic]
  * Name : Authentication Model [I write here funcation for Authentication which are as follows :
  * checkLoggedIn()
@@ -28,12 +27,10 @@ class Authentication_Model extends CI_Model {
         if($currentIP == '127.0.0.1' && $userName !='' && $email !='')
         {
             $this->db->select("username");
-            $this->db->from("users");
+            $this->db->from("employee");
             $this->db->where("username",$userName);
             $this->db->where("status",'Y');
             $query = $this->db->get(); 
-            //echo $this->db->last_query();
-            //echo $query->num_rows();
             if($query->num_rows() > 0)
             {
                 return TRUE;
@@ -61,12 +58,10 @@ class Authentication_Model extends CI_Model {
         if($currentIP == '127.0.0.1' && $userName !='' && $email !='')
         {
             $this->db->select("username");
-            $this->db->from("users");
+            $this->db->from("employee");
             $this->db->where("username",$userName);
             $this->db->where("status",'Y');
             $query = $this->db->get(); 
-            //echo $this->db->last_query();
-            //echo $query->num_rows();
             if($query->num_rows() > 0)
             {
                 redirect(site_url().'siteadmin/dashboard/index');
@@ -86,15 +81,14 @@ class Authentication_Model extends CI_Model {
         $userName = $this->input->post('username');
         $password = $this->input->post('password');
         
-        $encrypted_password_string = base64_encode($password);
 
         $currentIP = '127.0.0.1';
         if($currentIP == '127.0.0.1')
         {
             $this->db->select("*");
-            $this->db->from("users");
+            $this->db->from("employee");
             $this->db->where("username",$userName);
-            $this->db->where("password",$encrypted_password_string);
+            $this->db->where("password",$password);
             $this->db->where("status",'Y');
             $query = $this->db->get(); 
             //exit();
