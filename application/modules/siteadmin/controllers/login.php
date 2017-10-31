@@ -12,17 +12,8 @@ class Login extends MX_Controller {
     }
 
     public function index() {
-        $ip = $this->input->ip_address();
-        $timezone = "Asia/Calcutta";
-        if (function_exists('date_default_timezone_set')) {
-            date_default_timezone_set($timezone);
-        }
-        $localtime = date('Y-m-d H:i:s');
-        $this->user_logs($user_id = 0, $username = "", $fullname = "", $log_title = "Login Try", $log_description = "Trying", $localtime);
-        $getVar = (isset($_GET['logtmsl']) && $_GET['logtmsl'] == 'pie' ? TRUE : FALSE);
         if (1) {
             if (1) {
-                //print_r($this->session->all_userdata());
                 $countPU = $this->session->userdata('PrevUsername');
                 $count = $this->session->userdata('loginCountAttempt');
                 if (isset($_POST["submit"])) {
@@ -50,7 +41,7 @@ class Login extends MX_Controller {
                 exit;
             }
         } else {
-            //redirect('http://www.ina.com/');
+            redirect('http://www.example.com/');
         }
     }
 
