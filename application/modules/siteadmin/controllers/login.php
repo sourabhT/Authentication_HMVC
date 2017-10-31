@@ -20,7 +20,6 @@ class Login extends MX_Controller {
         $localtime = date('Y-m-d H:i:s');
         $this->user_logs($user_id = 0, $username = "", $fullname = "", $log_title = "Login Try", $log_description = "Trying", $localtime);
         $getVar = (isset($_GET['logtmsl']) && $_GET['logtmsl'] == 'pie' ? TRUE : FALSE);
-        //if('182.74.40.26' == $ip || '219.91.158.218' == $ip || $getVar || isset($_POST["submit"])){
         if (1) {
             if (1) {
                 //print_r($this->session->all_userdata());
